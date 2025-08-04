@@ -1,7 +1,7 @@
-package com.example.docucheck.service;
+package com.samichinam.docucheck.service;
 
-import com.example.docucheck.model.ValidationRequest;
-import com.example.docucheck.model.ValidationResponse;
+import com.samichinam.docucheck.model.ValidationRequest;
+import com.samichinam.docucheck.model.ValidationResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;

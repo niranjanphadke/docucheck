@@ -1,4 +1,4 @@
-package com.example.docucheck.model;
+package com.samichinam.docucheck.model;
 
 import java.util.List;
 import java.util.Map;

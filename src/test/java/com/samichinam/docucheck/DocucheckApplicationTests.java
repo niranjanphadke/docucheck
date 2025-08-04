@@ -1,4 +1,4 @@
-package com.example.docucheck;
+package com.samichinam.docucheck;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
