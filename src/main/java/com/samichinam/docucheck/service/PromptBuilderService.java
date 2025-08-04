@@ -1,13 +1,13 @@
 package com.samichinam.docucheck.service;
 
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 /**
- * Builds guided prompts for users based on desired sections.
+ * Builds guided prompts for users based on desired sections. The original
+ * implementation used Spring's {@code @Service} annotation, but removing
+ * the dependency keeps the project lightweight and compatible with the
+ * limited build environment.
  */
-@Service
 public class PromptBuilderService {
 
     public String buildPrompt(String objective, List<String> sections) {
