@@ -1,4 +1,4 @@
-package com.example.docucheck.model;
+package com.samichinam.docucheck.model;
 
 public class ValidationRequest {
     private String systemPrompt;
