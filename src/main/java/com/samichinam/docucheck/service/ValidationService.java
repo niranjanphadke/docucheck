@@ -10,15 +10,24 @@ import java.util.Map;
 
 @Service
 public class ValidationService {
+
+    private final GuidelineService guidelineService;
+
+    public ValidationService(GuidelineService guidelineService) {
+        this.guidelineService = guidelineService;
+    }
+
     public ValidationResponse validate(ValidationRequest request) {
         Map<String, String> breakdown = new HashMap<>();
         breakdown.put("description", "pending");
         breakdown.put("impactAssessment", "pending");
 
+        List<String> referencedGuidelines = guidelineService.search(request.getDocumentText());
+
         return new ValidationResponse(
                 "Pending",
                 breakdown,
-                List.of("LLM integration not yet implemented")
+                referencedGuidelines
         );
     }
 }
