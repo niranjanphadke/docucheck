@@ -64,13 +64,13 @@ The system prompt should clearly instruct the LLM to return structured JSON in t
 }
 
 
-Featuers:
+## 🆕 Additional Features
 
-Docx/PDF parsing
-Confidence scoring per section
-Guided prompt builder for users
-Admin UI for report review and approval
-CAPA linking & effectivity dashboard
+- Docx/PDF parsing
+- Confidence scoring per section
+- Guided prompt builder for users
+- Admin endpoints for report review and approval
+- CAPA linking & effectivity dashboard
 
 
 ## 🏃‍♂️ Running Locally

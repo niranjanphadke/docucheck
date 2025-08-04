@@ -22,12 +22,16 @@ public class ValidationService {
         breakdown.put("description", "pending");
         breakdown.put("impactAssessment", "pending");
 
+        Map<String, Double> scores = new HashMap<>();
+        breakdown.keySet().forEach(k -> scores.put(k, 1.0));
+
         List<String> referencedGuidelines = guidelineService.search(request.getDocumentText());
 
         return new ValidationResponse(
                 "Pending",
                 breakdown,
-                referencedGuidelines
+                referencedGuidelines,
+                scores
         );
     }
 }
