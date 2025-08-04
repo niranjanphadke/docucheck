@@ -1,6 +1,6 @@
 package com.samichinam.docucheck.service;
 
-import dev.langchain4j.model.chat.ChatLanguageModel;
+import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,7 @@ import java.util.List;
 @Service
 public class PromptChainService {
 
-    private final ChatLanguageModel model;
+    private final ChatModel model;
 
     public PromptChainService() {
         this.model = OpenAiChatModel.builder()
@@ -26,7 +26,7 @@ public class PromptChainService {
         String context = null;
         for (String prompt : prompts) {
             String input = context == null ? prompt : context + "\n" + prompt;
-            context = model.generate(input);
+            context = model.chat(input);
             responses.add(context);
         }
         return responses;
