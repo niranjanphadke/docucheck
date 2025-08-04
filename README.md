@@ -1,6 +1,6 @@
-# 📘 Codex Document Validator
+# 📘 Document Validator
 
-Codex is an intelligent Spring Boot-based document validation engine designed for regulated industries (e.g., pharma). It uses LangChain4j (v1.0.1) and supports multiple LLM backends: **Azure OpenAI**, **OpenAI**, and **Ollama**.  
+Docucheck is an intelligent Spring Boot-based document validation engine designed for regulated industries (e.g., pharma). It uses LangChain4j (v1.0.1) and supports multiple LLM backends: **Azure OpenAI**, **OpenAI**, and **Ollama**.  
 The engine performs guideline-based validation on investigation reports (e.g., deviations, CAPAs) and returns structured, explainable output.
 
 ## ✅ Features
