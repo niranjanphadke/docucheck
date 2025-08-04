@@ -7,14 +7,19 @@ public class ValidationResponse {
     private String validationStatus;
     private Map<String, String> complianceBreakdown;
     private List<String> recommendations;
+    private Map<String, Double> confidenceScores;
 
     public ValidationResponse() {
     }
 
-    public ValidationResponse(String validationStatus, Map<String, String> complianceBreakdown, List<String> recommendations) {
+    public ValidationResponse(String validationStatus,
+                              Map<String, String> complianceBreakdown,
+                              List<String> recommendations,
+                              Map<String, Double> confidenceScores) {
         this.validationStatus = validationStatus;
         this.complianceBreakdown = complianceBreakdown;
         this.recommendations = recommendations;
+        this.confidenceScores = confidenceScores;
     }
 
     public String getValidationStatus() {
@@ -39,5 +44,13 @@ public class ValidationResponse {
 
     public void setRecommendations(List<String> recommendations) {
         this.recommendations = recommendations;
+    }
+
+    public Map<String, Double> getConfidenceScores() {
+        return confidenceScores;
+    }
+
+    public void setConfidenceScores(Map<String, Double> confidenceScores) {
+        this.confidenceScores = confidenceScores;
     }
 }
