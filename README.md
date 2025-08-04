@@ -72,3 +72,21 @@ Guided prompt builder for users
 Admin UI for report review and approval
 CAPA linking & effectivity dashboard
 
+
+## 🏃‍♂️ Running Locally
+
+Build and start the application:
+
+```bash
+mvn spring-boot:run
+```
+
+The service exposes a POST `/api/validate` endpoint. Example payload:
+
+```json
+{
+  "systemPrompt": "You are a quality assurance expert...",
+  "guideLineText": "Follow these guidelines...",
+  "documentText": "This deviation report describes..."
+}
+```
