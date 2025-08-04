@@ -1,0 +1,21 @@
+name: Manual Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ⏬ Checkout source code
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: 🛠️ Build with Maven
+        run: mvn -B verify 
